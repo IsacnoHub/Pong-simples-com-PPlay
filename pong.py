@@ -170,6 +170,12 @@ while True:
     if barra_d.y + barra_d.height/2 > bola.y + bola.height/2:
         barra_d.y -= vel_barra_d * janela.delta_time()
 
+#multiplayer, tem que colocar esse mesmo bloco como anotação ali embaixo
+        #if teclado.key_pressed("W"):
+            #barra_d.y -= vel_barra_d * janela.delta_time()
+        #if teclado.key_pressed("S"):
+            #barra_d.y += vel_barra_d * janela.delta_time()
+
 #barra esquerda controlado por W, S:
     if estado == 1:  #só pra não dar pra controlar antes de começar o jogo antes de apertar espaço
         if teclado.key_pressed("UP"):
@@ -209,4 +215,5 @@ while True:
         janela.draw_text(text_win, (janela.width/2 - text_width_win/2), (distan_event), size_event, (branco), "Calibri", True)#True é pra negrito
     if derrota_ativa:
         janela.draw_text(text_lose, (janela.width/2 - text_width_lose/2), (distan_event), size_event, (vermelho), "Calibri", True)
+
     janela.update()
